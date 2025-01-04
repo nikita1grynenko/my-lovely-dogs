@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLovelyDogs.Application", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLovelyDogs.Api", "MyLovelyDogs.Api\MyLovelyDogs.Api.csproj", "{4AA93B7A-8380-4162-8F1F-07D7762021D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLovelyDogs.Bot", "MyLovelyDogs.Bot\MyLovelyDogs.Bot.csproj", "{099D6A87-8D82-4A21-AF89-4BB0ED420F9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{4AA93B7A-8380-4162-8F1F-07D7762021D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AA93B7A-8380-4162-8F1F-07D7762021D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AA93B7A-8380-4162-8F1F-07D7762021D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099D6A87-8D82-4A21-AF89-4BB0ED420F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099D6A87-8D82-4A21-AF89-4BB0ED420F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099D6A87-8D82-4A21-AF89-4BB0ED420F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099D6A87-8D82-4A21-AF89-4BB0ED420F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
