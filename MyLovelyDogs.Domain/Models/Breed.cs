@@ -2,7 +2,7 @@ namespace MyLovelyDogs.Domain.Models;
 
 public class Breed
 {
-    public string Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Temperament { get; set; }
     public string Origin { get; set; }

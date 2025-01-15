@@ -6,16 +6,21 @@ namespace MyLovelyDogs.Application.Services;
 
 public class DogService : IDogService
 {
-    private readonly TheDogApiClient _catApiClient;
+    private readonly TheDogApiClient _dogApiClient;
 
-    public DogService(TheDogApiClient catApiClient)
+    public DogService(TheDogApiClient dogApiClient)
     {
-        _catApiClient = catApiClient;
+        _dogApiClient = dogApiClient;
     }
 
-    public async Task<Image?> GetDogImageByIdAsync(string imageId)
+    public async Task<Image?> GetDogImageByIdAsync(int imageId)
     {
-        return await _catApiClient.GetDogImageByIdAsync(imageId);
+        return await _dogApiClient.GetDogImageByIdAsync(imageId);
+    }
+
+    public async Task<List<Breed>?> GetDogInfoByNameAsync(string dogName)
+    {
+        return await _dogApiClient.GetDogInfoByNameAsync(dogName);
     }
     
 }
