@@ -4,6 +4,6 @@ namespace MyLovelyDogs.Infrastructure.Contracts;
 
 public interface ITheDogApiClient
 {
-    Task<Image?> GetDogImageByIdAsync(int imageId);
+    Task<Image?> GetDogImageByIdAsync(string imageId);
     Task<List<Breed>?> GetDogInfoByNameAsync(string dogName);
 }

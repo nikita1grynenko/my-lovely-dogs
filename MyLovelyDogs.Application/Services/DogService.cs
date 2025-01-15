@@ -13,7 +13,7 @@ public class DogService : IDogService
         _dogApiClient = dogApiClient;
     }
 
-    public async Task<Image?> GetDogImageByIdAsync(int imageId)
+    public async Task<Image?> GetDogImageByIdAsync(string imageId)
     {
         return await _dogApiClient.GetDogImageByIdAsync(imageId);
     }

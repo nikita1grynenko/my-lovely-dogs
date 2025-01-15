@@ -4,6 +4,6 @@ namespace MyLovelyDogs.Application.Contracts;
 
 public interface IDogService
 {
-    Task<Image?> GetDogImageByIdAsync(int imageId);
+    Task<Image?> GetDogImageByIdAsync(string imageId);
     Task<List<Breed>?> GetDogInfoByNameAsync(string dogName);
 }
