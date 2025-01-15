@@ -13,7 +13,7 @@ public class TheDogApiClient : ITheDogApiClient
         _httpClient = httpClient;
     }
 
-    public async Task<Image?> GetDogImageByIdAsync(int imageId)
+    public async Task<Image?> GetDogImageByIdAsync(string imageId)
     {
         var response = await _httpClient.GetAsync($"/v1/images/{imageId}");
         response.EnsureSuccessStatusCode();
@@ -21,7 +21,7 @@ public class TheDogApiClient : ITheDogApiClient
         var content = await response.Content.ReadAsStringAsync();
         return JsonSerializer.Deserialize<Image>(content, new JsonSerializerOptions
         {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
             PropertyNameCaseInsensitive = true
         });
     }
@@ -32,9 +32,9 @@ public class TheDogApiClient : ITheDogApiClient
         response.EnsureSuccessStatusCode();
         
         var content = await response.Content.ReadAsStringAsync();
-        return JsonSerializer.Deserialize<List<Breed>>(content, new JsonSerializerOptions
+        return JsonSerializer.Deserialize<List<Breed>?>(content, new JsonSerializerOptions
         {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
             PropertyNameCaseInsensitive = true
         });
     }
